@@ -19,7 +19,7 @@ function Home() {
         value={query}
         onChange={(e) => setSearchParams({ s: e.target.value })}
         placeholder="Search Recipes"
-      />    
+      />
 
       <ul>
         {recipe.map((meal) => {
