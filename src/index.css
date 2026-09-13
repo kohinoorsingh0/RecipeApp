@@ -1,0 +1,124 @@
+:root {
+  --paper: #fbf3e3;
+  --paper-card: #fffdf8;
+  --ink: #241f18;
+  --ink-soft: #6b6152;
+  --basil: #2b3626;
+  --basil-dark: #1c241a;
+  --paprika: #c1481d;
+  --paprika-dark: #9c3a15;
+  --saffron: #e2a63b;
+  --saffron-soft: #f3d48a;
+  --line: #e4d6b8;
+
+  --shadow-sm: 0 1px 2px rgba(36, 31, 24, 0.06);
+  --shadow-card: 0 1px 2px rgba(36, 31, 24, 0.06), 0 16px 32px -20px rgba(36, 31, 24, 0.45);
+  --shadow-lift: 0 4px 8px rgba(36, 31, 24, 0.08), 0 24px 48px -20px rgba(36, 31, 24, 0.5);
+
+  --radius-l: 18px;
+  --radius-m: 12px;
+  --radius-pill: 999px;
+
+  --font-display: "Fraunces", Georgia, serif;
+  --font-body: "Work Sans", -apple-system, BlinkMacSystemFont, sans-serif;
+
+  --header-h: 68px;
+  --ease: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background-color: var(--paper);
+  background-image: radial-gradient(circle at 1px 1px, rgba(36, 31, 24, 0.05) 1px, transparent 0);
+  background-size: 22px 22px;
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-display);
+  color: var(--basil);
+  margin: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+input {
+  font-family: inherit;
+}
+
+::selection {
+  background: var(--saffron-soft);
+  color: var(--basil-dark);
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible {
+  outline: 2px solid var(--paprika);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+}
+::-webkit-scrollbar-track {
+  background: var(--paper);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--line);
+  border-radius: 999px;
+  border: 3px solid var(--paper);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--saffron);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}

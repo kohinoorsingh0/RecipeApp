@@ -1,0 +1,3 @@
+.favourites {
+  animation: fadeInUp 0.5s var(--ease) both;
+}
